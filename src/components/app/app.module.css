@@ -1,0 +1,9 @@
+.app{
+  display:grid;
+  grid-template-areas:
+  "hd hd"
+  "nv cn";
+}
+.app_content{
+  grid-area:cn;
+}
