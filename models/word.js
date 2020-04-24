@@ -9,3 +9,4 @@ const wordSchema=new Schema({
   year:Number
 });
 
+module.exports=mongoose.model('Probe',wordSchema);

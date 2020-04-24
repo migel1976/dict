@@ -10,11 +10,24 @@ class AddBook extends React.Component{
             filePath:'',
             successLoadData:''
     };
-    getPage=()=>{
-      axios.get('book/upload_book_to_db')
-     // axios.get('http://localhost:3001/book/upload_book_to_db')
-      .then(res=>console.log(res));
-    };    
+    changeYear=(e)=>{
+      this.setState({year:e.target.value})
+    };
+
+    changeType=(e)=>{
+      this.setState({type:e.target.value})
+    };
+  
+    sendBookInfo=(e)=>{
+      e.preventDefault();
+      axios.post('book/upload_book_to_db',{year:this.state.year,
+                                           type:this.state.type,
+                                           filePath:this.state.filePath})
+      .then(res=>{
+                  console.log(res);
+                  this.setState({successLoadData:res.data});
+      })
+    };
    
     fileUpload=(e)=>{
       const file=e.target.files[0];
@@ -37,16 +50,22 @@ class AddBook extends React.Component{
       return(
             <div className={style.add_book}>
               <h2>Добавление книг в словарь</h2>
-              <form>
-                <div><input placeholder='Год Издания' /></div>
-                <div><input placeholder='Вид литературы' /></div>
+              <form onSubmit={this.sendBookInfo}>
+                <div><input placeholder='Год Издания'
+                            value={this.state.year}
+                            onChange={this.changeYear}
+                            /></div>
+                <div><input placeholder='Вид литературы'
+                            value={this.state.type}
+                            onChange={this.changeType}
+                            /></div>
                 <div><input type='file'
                             onChange={this.fileUpload}
                       />
                 </div>
                 <div><input type='submit' value='Загрузить'/></div>
               </form>
-              <div><button onClick={this.getPage} /></div>
+              <div><h1>{this.state.successLoadData}</h1></div>
               <div><h1>{this.state.filePath}</h1></div>
             </div>
       )
