@@ -5,6 +5,7 @@ const multer=require('multer');
 const app=express();
 const bookRouter=require('./routes/bookRouter.js');
 const homeRouter=require('./routes/homeRouter.js');
+const searchRouter=require('./routes/searchRouter.js');
 
 const storageConfig=multer.diskStorage({
       destination:(req,file,cb)=>{
@@ -19,7 +20,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(multer({storage:storageConfig}).single('file'));
 
 app.use('/book',bookRouter);
-app.use('/',homeRouter);
+app.use('/',searchRouter);
+//app.use('/',homeRouter);
 
 app.use(function(req,res){
       res.status(404).send('Нет такой страницы');
