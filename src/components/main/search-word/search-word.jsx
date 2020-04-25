@@ -3,8 +3,8 @@ import * as axios from 'axios';
 
 export default class SearchWord extends React.Component{
   state={
-          search:'введите',
-          dataWord:[]
+          search:'противъ',
+//          dataWord:[]
   };
   changeSearch=(e)=>{
     this.setState({
@@ -17,7 +17,8 @@ export default class SearchWord extends React.Component{
     axios.post('search_by_word',{search:this.state.search})
     .then(res=>{
       console.log('searchWord',res)
-      this.setState({dataWord:res.data})  
+      //this.setState({dataWord:res.data})  
+      this.props.updateData(res.data);
     }
     )
   };
@@ -35,7 +36,7 @@ export default class SearchWord extends React.Component{
                 </div>
               </form>
               <div>
-                  {this.state.dataWord.map((u)=><div>{u.name} {u.count} {u.type} {u.year}</div>)}
+                  {this.props.data.map((u)=><div>{u.name} {u.count} {u.type} {u.year}</div>)}
               </div>
             </div>
     )
