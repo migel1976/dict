@@ -2,6 +2,7 @@ import React from 'react';
 import style from './main.module.css';
 import SearchWord from './search-word/search-word';
 import TimeGraph from './time-graph/time-graph';
+import TypeGraph from './type-graph/type-graph';
 
 class Main extends React.Component{
   state={
@@ -20,6 +21,7 @@ class Main extends React.Component{
           <h1>Главная</h1>
           <SearchWord data={this.state.data} updateData={this.updateData}/>
           <TimeGraph data={this.state.data}/>
+          <TypeGraph />
         </div>
   )
 }
