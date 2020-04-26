@@ -36,18 +36,17 @@ export default class TypeGraph extends PureComponent {
       <BarChart
         width={500}
         height={300}
-        data={data}
+        data={this.props.typeData}
         margin={{
           top: 20, right: 30, left: 20, bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="type" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-        <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+        <Bar dataKey="count" stackId="a" fill="#8884d8" />
       </BarChart>
     );
   }
