@@ -6,7 +6,8 @@ const wordSchema=new Schema({
   name:String,
   count:Number,
   type:String,
-  year:Number
+  year:Number,
+  sentence:String
 });
 
 module.exports=mongoose.model('Probe',wordSchema);

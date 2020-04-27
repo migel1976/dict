@@ -36,7 +36,7 @@ export default class SearchWord extends React.Component{
                 </div>
               </form>
               <div>
-                  {this.props.data.map((u)=><div>{u.name} {u.count} {u.type} {u.year}</div>)}
+                  {this.props.data.map((u)=><div>{u.name} {u.count} {u.type} {u.year} {u.sentence}</div>)}
               </div>
             </div>
     )

@@ -20,7 +20,6 @@ class Main extends React.Component{
   };
   
   analizeTime=()=>{
-      // const reduced = this.state.graphArray.reduce(function(m, d){
       const reduced = this.state.data.reduce(function(m, d){
           if(!m[d.year]){
             m[d.year] = {...d, count: d.count};
