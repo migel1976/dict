@@ -1,9 +1,19 @@
 .app{
+  width:960px;
+  margin: 0 auto;
   display:grid;
   grid-template-areas:
-  "hd hd"
-  "nv cn";
+  "hd hd "
+  "nv nv"
+  "cn cn ";
 }
 .app_content{
   grid-area:cn;
 }
+
+body{
+  font-family: Roboto,Segoe UI,Arial,sans-serif;
+  font-size:16px;
+  background-color: #44014C;
+  background-image:url(../../assets/images/paper.jpg);
+    }

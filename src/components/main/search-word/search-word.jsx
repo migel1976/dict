@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './search-word.module.css';
 import * as axios from 'axios';
 
 export default class SearchWord extends React.Component{
@@ -25,7 +26,7 @@ export default class SearchWord extends React.Component{
 
   render(){
     return(
-            <div>
+            <div className={style.search_word}>
               <form onSubmit={this.searchWord}>
                 <div>
                   <input placeholder='поиск' 
@@ -35,10 +36,7 @@ export default class SearchWord extends React.Component{
                   <input type='submit' value='найти' />
                 </div>
               </form>
-              <div>
-                  {this.props.data.map((u)=><div>{u.name} {u.count} {u.type} {u.year} {u.sentence}</div>)}
-              </div>
-            </div>
+           </div>
     )
   }
 };

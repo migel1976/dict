@@ -6,8 +6,6 @@ import Header from '../header/header';
 import Main from '../main/main';
 import AddBook from '../add-book/add-book';
 
-
-
   const App=()=>{
     return(
       <div className={style.app}>

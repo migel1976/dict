@@ -1,4 +1,5 @@
 .header{
   grid-area:hd;
   color:blue;
+  text-align:center;
 }

@@ -3,6 +3,8 @@ import style from './main.module.css';
 import SearchWord from './search-word/search-word';
 import TimeGraph from './time-graph/time-graph';
 import TypeGraph from './type-graph/type-graph';
+import TextExample from './text-example/text-example';
+import TextInfo from './text-info/text-info';
 
 class Main extends React.Component{
   state={
@@ -62,10 +64,11 @@ class Main extends React.Component{
   render(){
   return(
         <div className={style.main}>
-          <h1>Главная</h1>
           <SearchWord data={this.state.data} updateData={this.updateData}/>
           <TimeGraph timeData={this.state.timeData}/>
           <TypeGraph typeData={this.state.typeData}/>
+          <TextExample data={this.state.data} />
+          <TextInfo data={this.state.data} />
         </div>
   )
 }
