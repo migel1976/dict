@@ -7,6 +7,8 @@ class TimeGraph extends React.Component{
  render(){  
      return( 
        <div className={style.time_graph}>
+          <h2>График зависимости использования слов от времени</h2>
+          <div>
           <LineChart width={600} height={300} data={this.props.timeData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
             <Line name='кол-во слов' type="monotone" dataKey="count" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -15,6 +17,7 @@ class TimeGraph extends React.Component{
             <YAxis label={{value:'кол-во слов', angle:-90, position: 'insideLeft'}} />
             <Tooltip/>
           </LineChart>
+          </div>
        </div>
      )
  }

@@ -2,7 +2,6 @@ import React from 'react';
 import style from './text-info.module.css';
 
 const TextInfo=(props)=>{
-  debugger;
   if(props.data.length!==0){
     console.log('text-info',props.data[0].name);
   }

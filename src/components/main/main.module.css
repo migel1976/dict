@@ -1,16 +1,4 @@
 .main{
-  margin-top:20px;
-  display:grid;
-  grid-template-areas:
-  "search search"
-  "info time"
-  "example type";
-}
-.main_search{
-  text-align:center
-}
-
-.main h2{
-  color:red;
+  color:green;
   text-align:center;
 }

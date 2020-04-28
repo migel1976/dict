@@ -1,12 +1,12 @@
 import React from 'react';
-import style from './main.module.css';
+import style from './search.module.css';
 import SearchWord from './search-word/search-word';
 import TimeGraph from './time-graph/time-graph';
 import TypeGraph from './type-graph/type-graph';
 import TextExample from './text-example/text-example';
 import TextInfo from './text-info/text-info';
 
-class Main extends React.Component{
+export default class Search extends React.Component{
   state={
           data:[],
           timeData:[],
@@ -63,7 +63,7 @@ class Main extends React.Component{
 
   render(){
   return(
-        <div className={style.main}>
+        <div className={style.search}>
           <SearchWord data={this.state.data} updateData={this.updateData}/>
           {this.state.data.length!==0?<>
           <TimeGraph timeData={this.state.timeData}/>
@@ -78,6 +78,5 @@ class Main extends React.Component{
   )
 }
 };
-export default Main;
 
 

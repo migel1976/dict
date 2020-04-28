@@ -1,0 +1,5 @@
+{
+  "port":3001,
+  "mongoUrl":"mongodb+srv://root:root@cluster0-jjx5c.azure.mongodb.net/test?retryWrites=true&w=majority",
+  "localMongoUrl":"mongodb://localhost/wordsdb"
+}

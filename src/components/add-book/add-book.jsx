@@ -26,7 +26,9 @@ class AddBook extends React.Component{
       .then(res=>{
                   console.log(res);
                   this.setState({successLoadData:res.data});
-      })
+                  this.setState({filePath:''});
+                  console.log('sendBookInfo',this.state.filePath);  
+                  });
     };
    
     fileUpload=(e)=>{
@@ -39,7 +41,9 @@ class AddBook extends React.Component{
         }
       }).then(res=>{
             console.log(res.data);
-            this.setState({filePath:res.data});
+            this.setState({filePath:res.data
+            });
+            this.setState({successLoadData:''});
              }
       )
     };

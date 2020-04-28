@@ -1,6 +1,7 @@
 const express=require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
+const config=require('config');
 const multer=require('multer');
 const app=express();
 const bookRouter=require('./routes/bookRouter.js');
@@ -27,7 +28,15 @@ app.use(function(req,res){
       res.status(404).send('Нет такой страницы');
 });
 
-mongoose.connect('mongodb://localhost/wordsdb',(err)=>{
+
+const PORT=config.get('port');
+const mongoUrl=config.get('mongoUrl');
+mongoose.connect(mongoUrl,
+  {
+      useNewUrlParser: true,
+     useUnifiedTopology: true
+  }
+    ,(err)=>{
   if(err) return console.log('Не могу подключится к БД',err);
-  app.listen(3001,()=>console.log('Сервер запущен на порту 3001'));
+  app.listen(PORT,()=>console.log(`Сервер запущен на порту ${PORT}`));
 });
