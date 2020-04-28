@@ -27,7 +27,7 @@ class Main extends React.Component{
             m[d.year] = {...d, count: d.count};
             return m;
           }
-          m[d.year].count+= d.count;
+
           return m;
        },{});
         const result = Object.keys(reduced).map(function(k){
@@ -65,10 +65,15 @@ class Main extends React.Component{
   return(
         <div className={style.main}>
           <SearchWord data={this.state.data} updateData={this.updateData}/>
+          {this.state.data.length!==0?<>
           <TimeGraph timeData={this.state.timeData}/>
           <TypeGraph typeData={this.state.typeData}/>
           <TextExample data={this.state.data} />
           <TextInfo data={this.state.data} />
+            </>
+            :
+            <h2>к сожалению искомое слово не найдено</h2>
+          }
         </div>
   )
 }

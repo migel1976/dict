@@ -10,19 +10,18 @@ export default class TypeGraph extends PureComponent {
     return (
       <div className={style.type_graph}>
         <BarChart
-          width={500}
+          width={600}
           height={300}
           data={this.props.typeData}
           margin={{
-            top: 20, right: 30, left: 20, bottom: 5,
+            top: 5, right: 20, left: 0, bottom: 5,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="type" />
-          <YAxis />
+          <YAxis label={{value:'кол-во слов', angle:-90, position: 'insideLeft'}} />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="count" stackId="a" fill="#8884d8" />
+          <Bar name='кол-во слов' dataKey="count" stackId="a" fill="#8884d8" />
         </BarChart>
       </div>
     );

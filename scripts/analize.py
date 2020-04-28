@@ -49,6 +49,7 @@ try:
     FILENAME=sys.argv[1]
     YEAR=sys.argv[2]
     TYPE=sys.argv[3]
+    TYPE=TYPE.decode('cp1251').encode('utf-8')
     arraySentence=[];
     myoldrussianarray=[]
     with open(FILENAME,'r') as fileRead1:
