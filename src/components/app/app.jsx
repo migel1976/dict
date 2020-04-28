@@ -14,6 +14,7 @@ import AddBook from '../add-book/add-book';
         <div className={style.app_content}>
           <Route path='/search' render={()=>(<Main />)}/>
           <Route path='/add' render={()=>(<AddBook />)}/>
+      {/* <Route path='/' render={()=>(<MainPage />)}/> */}
         </div>
       </div>
     )
