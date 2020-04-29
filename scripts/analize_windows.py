@@ -4,7 +4,6 @@
 import sys
 import json
 import io
-import os
 
 def clean(text):
     if not isinstance(text,str):
@@ -45,13 +44,12 @@ def oldrussian(text):
             flagoldrussian=False
     return sorted(summary)
 
+
 try:
     FILENAME=sys.argv[1]
     YEAR=sys.argv[2]
     TYPE=sys.argv[3]
-    print(os.name)
-    if(os.name=='nt'):
-        TYPE=TYPE.decode('cp1251').encode('utf-8')
+    TYPE=TYPE.decode('cp1251').encode('utf-8')
     arraySentence=[];
     myoldrussianarray=[]
     with open(FILENAME,'r') as fileRead1:
@@ -81,12 +79,7 @@ try:
             count=s.count(element)
             for sentence in arraySentence:
                 if sentence.find(element)!=-1:
-                    head,sep,tail=sentence.partition(element)
-                    findSentence=head +' ' + sep
-                    # findSentence=sentence.split(element,1)[0]
-                    # findSentence=sentence
-                    # sep = '...'
-                    # rest = text.split(sep, 1)[0]
+                    findSentence=sentence
                     # print('findSentence',findSentence);
                     try:
                         jsonstring={'name':element,'count':str(count),'year':YEAR,'type':TYPE,'sentence':findSentence}

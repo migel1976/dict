@@ -24,8 +24,8 @@ export default class TypeGraph extends PureComponent {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="type" />
           {
-          // <YAxis label={{value:'кол-во слов', angle:-90, position: 'insideLeft'}} />
-          <YAxis label={{value:'кол-во слов', angle:-90, position: 'outsideLeft'}} />
+          <YAxis label={{value:'кол-во слов', angle:-90, position: 'insideLeft'}} />
+          // <YAxis label={{value:'кол-во слов', angle:-90, position: 'outsideLeft'}} />
           }
           <Tooltip />
           <Bar name='кол-во слов' dataKey="count" stackId="a" fill="#8884d8" />

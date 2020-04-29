@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const config=require('config');
 
 const Schema=mongoose.Schema;
 
@@ -10,4 +11,5 @@ const wordSchema=new Schema({
   sentence:String
 });
 
-module.exports=mongoose.model('Probe',wordSchema);
+const table=config.get('table');
+module.exports=mongoose.model(table,wordSchema);

@@ -8,7 +8,8 @@ class AddBook extends React.Component{
             type:'поэзия',
             year:1917,
             filePath:'',
-            successLoadData:''
+            successLoadData:'',
+            flagSaveFile:true
     };
     changeYear=(e)=>{
       this.setState({year:e.target.value})
@@ -20,13 +21,15 @@ class AddBook extends React.Component{
   
     sendBookInfo=(e)=>{
       e.preventDefault();
+      this.setState({flagSaveFile:false});
       axios.post('book/upload_book_to_db',{year:this.state.year,
                                            type:this.state.type,
                                            filePath:this.state.filePath})
       .then(res=>{
                   console.log(res);
-                  this.setState({successLoadData:res.data});
-                  this.setState({filePath:''});
+                  this.setState({successLoadData:res.data,
+                                 filePath:'',
+                                 flagSaveFile:true});
                   console.log('sendBookInfo',this.state.filePath);  
                   });
     };
@@ -41,14 +44,13 @@ class AddBook extends React.Component{
         }
       }).then(res=>{
             console.log(res.data);
-            this.setState({filePath:res.data
+            this.setState({
+              filePath:res.data,
+              successLoadData:'',
             });
-            this.setState({successLoadData:''});
              }
       )
     };
-
-
 
     render(){
       return(
@@ -69,6 +71,11 @@ class AddBook extends React.Component{
                 </div>
                 <div><input type='submit' value='Загрузить'/></div>
               </form>
+              <div>
+                    {!this.state.flagSaveFile?<h2>Подождите данные загружаются на сервер...</h2>
+                      :<h2/>
+                    }
+              </div>
               <div><h1>{this.state.successLoadData}</h1></div>
               <div><h1>{this.state.filePath}</h1></div>
             </div>

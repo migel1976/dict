@@ -13,7 +13,7 @@ class TimeGraph extends React.Component{
             <Line name='кол-во слов' type="monotone" dataKey="count" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
             {/*<XAxis dataKey="year" label={{ value: 'Года', position: 'insideBottomRight', offset: 0 }}/>*/}
-             <XAxis dataKey='year' label={{value:'Время'}} />
+             <XAxis dataKey='year' label={{value:'Время',position:'insideBottomRight',offset:-3}} />
             <YAxis label={{value:'кол-во слов', angle:-90, position: 'insideLeft'}} />
             <Tooltip/>
           </LineChart>

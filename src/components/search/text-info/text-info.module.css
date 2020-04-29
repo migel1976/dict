@@ -1,3 +1,5 @@
 .text_info{
  grid-area:info;
+ text-align:center;
+ color:red; 
 }
