@@ -10,8 +10,12 @@ export default class Search extends React.Component{
   state={
           data:[],
           timeData:[],
-          typeData:[]
+          typeData:[],
+          flagSearch:true
   };
+
+  // componentDidMount=()=>{
+  //    this.updateData(
 
   updateData=(newdata)=>{
     this.setState({
@@ -64,15 +68,17 @@ export default class Search extends React.Component{
   render(){
   return(
         <div className={style.search}>
-          <SearchWord data={this.state.data} updateData={this.updateData}/>
-          {this.state.data.length!==0?<>
-          <TimeGraph timeData={this.state.timeData}/>
-          <TypeGraph typeData={this.state.typeData}/>
-          <TextExample data={this.state.data} />
-          <TextInfo data={this.state.data} />
+          <SearchWord flagSearch={this.state.flagSearch} data={this.state.data} updateData={this.updateData}/>
+          {this.state.data.length!==0 && this.state.data[0].count!==0?
+            <>
+              <TimeGraph timeData={this.state.timeData}/>
+              <TypeGraph typeData={this.state.typeData}/>
+              <TextExample data={this.state.data} />
+              <TextInfo data={this.state.data} />
             </>
             :
-            <h2>к сожалению искомое слово не найдено</h2>
+            <>
+            </>
           }
         </div>
   )

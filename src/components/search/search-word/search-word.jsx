@@ -4,9 +4,11 @@ import * as axios from 'axios';
 
 export default class SearchWord extends React.Component{
   state={
-          search:'противъ',
+          search:'',
+          flagSearch:false
 //          dataWord:[]
   };
+
   changeSearch=(e)=>{
     this.setState({
       search:e.target.value
@@ -19,6 +21,9 @@ export default class SearchWord extends React.Component{
     .then(res=>{
       console.log('searchWord',res)
       //this.setState({dataWord:res.data})  
+      res.data.length!==0 && res.data[0].count!==0?
+        this.setState({flagSearch:false})
+        : this.setState({flagSearch:true})
       this.props.updateData(res.data);
     }
     )
@@ -36,6 +41,9 @@ export default class SearchWord extends React.Component{
                   <input type='submit' value='найти' />
                 </div>
               </form>
+              <div>
+                  {this.state.flagSearch?<h2>Слово не найдено</h2>:<></>}
+              </div>
            </div>
     )
   }
