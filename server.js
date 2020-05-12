@@ -1,3 +1,4 @@
+// const cors=require('cors');
 const express=require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
@@ -19,7 +20,7 @@ const storageConfig=multer.diskStorage({
 app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(multer({storage:storageConfig}).single('file'));
-
+// app.use(cors());
 app.use('/book',bookRouter);
 app.use('/',searchRouter);
 //app.use('/',homeRouter);

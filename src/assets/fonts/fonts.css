@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'RUSIJA-01';
+    src: url('./oldrussian.ttf') format('truetype'),
+    url('./oldrussian.ttf') format('woff2'),
+    url('./oldrussian.ttf') format('woff');
+    /* src: url('./fonts/Circe-Regular.woff2') format('woff2'), */
+    /*     url('./fonts/Circe-Regular.woff') format('woff'), */
+    /*     url('./fonts/Circe-Regular.ttf') format('truetype'); */
+    font-weight: 400;
+    /* font-weight: normal; */
+    font-style: normal;
+    /* font-display: swap; */
+}
+
+@font-face {
+    font-family: 'A La Russ';
+    src: url('./rus.ttf') format('truetype'),
+    url('./rus.ttf') format('woff2'),
+    url('./rus.ttf') format('woff');
+    /* src: url('./fonts/Circe-Regular.woff2') format('woff2'), */
+    /*     url('./fonts/Circe-Regular.woff') format('woff'), */
+    /*     url('./fonts/Circe-Regular.ttf') format('truetype'); */
+    font-weight: 400;
+    /* font-weight: normal; */
+    font-style: normal;
+    /* font-display: swap; */
+}

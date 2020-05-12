@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/fonts/fonts.css';
 import style from './app.module.css';
 import {Route} from 'react-router-dom';
 import Navbar from '../navbar/navbar';

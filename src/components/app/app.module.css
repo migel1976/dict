@@ -1,6 +1,7 @@
 .app{
   width:960px;
-  margin: 0 auto;
+  margin: 100 auto;
+  /* margin-top: 300px; */
   display:grid;
   grid-template-areas:
   "hd hd "
@@ -13,7 +14,23 @@
 
 body{
   font-family: Roboto,Segoe UI,Arial,sans-serif;
-  font-size:16px;
-  background-color: #44014C;
-  background-image:url(../../assets/images/paper.jpg);
+  font-size:20px;
+  /* background-color: #44014C; */
+  /* background-image:url(../../assets/images/paper.jpg); */
+  /* background-image:url(../../assets/images/paper2.png); */
+  /* background-image:url(../../assets/images/paper3.jpg); */
+  
+  background-image:url(../../assets/images/paper6.png);
+  
+  /* background-image:url(../../assets/images/paper1.png); */
+  /* background-size: contain; */
+  background-size: cover;
+  background-repeat:no-repeat;
+  /* background-image:url(../../assets/images/paper.jpg); */
+  /* font-family:'RUSIJA-01'; */
+  font-family:'A La Russ';
     }
+h1{
+ /* font-family:'RUSIJA-01'; */
+  font-size:48px;
+ };
