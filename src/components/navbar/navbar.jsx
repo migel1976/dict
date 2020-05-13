@@ -5,8 +5,8 @@ import style from './navbar.module.css';
 const Navbar=()=>{
   return(
         <div className={style.navbar}>
-          <NavLink to='/'>Главная</ NavLink>
-          |
+          {/*<NavLink to='/'>Главная</ NavLink>*/}
+          {/*|*/}
           <NavLink to='/search'>Поиск </NavLink>
           |
           <NavLink to='/add'> Добавление данных</NavLink>

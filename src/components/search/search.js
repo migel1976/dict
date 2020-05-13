@@ -11,6 +11,7 @@ export default class Search extends React.Component{
           data:[],
           timeData:[],
           typeData:[],
+			nameData:[],
           flagSearch:true
   };
 
@@ -64,6 +65,27 @@ export default class Search extends React.Component{
           console.log('result type is', result);
           this.setState({typeData:[...result]});
   }
+	
+  analizeName=()=>{
+      const reduced = this.state.data.reduce(function(m, d){
+          if(!m[d.name]){
+            m[d.name] = {...d, count: d.count};
+            return m;
+          }
+          m[d.name].count+= d.count;
+          return m;
+       },{});
+        const result = Object.keys(reduced).map(function(k){
+           const item  = reduced[k];
+           return {
+                name:item.name,
+                count:item.count
+           }
+       })
+          console.log('analizeName is ', result);
+          this.setState({typeData:[...result]});
+  }
+
 
   render(){
   return(
@@ -80,6 +102,7 @@ export default class Search extends React.Component{
             <>
             </>
           }
+	  {/*<button onClick={this.analizeName}>name</button>*/}
         </div>
   )
 }

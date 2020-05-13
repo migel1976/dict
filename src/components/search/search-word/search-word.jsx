@@ -41,7 +41,7 @@ export default class SearchWord extends React.Component{
                   <input type='submit' value='найти' />
                 </div>
               </form>
-              <div>
+              <div className={style.find}>
                   {this.state.flagSearch?<h2>Слово не найдено</h2>:<></>}
               </div>
            </div>

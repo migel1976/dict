@@ -7,7 +7,11 @@ const TextInfo=(props)=>{
   }
   return(
           <div className={style.text_info}>
-            <h1>{props.data.length!==0?props.data[0].name:''}</h1>
+            {/*<h1>{props.data.length!==0?props.data[0].name:''}</h1>*/}
+			<h1>{props.data.length!==0
+				? 
+				    props.data[0].name
+				 :''}</h1>
           </div>
   )
 

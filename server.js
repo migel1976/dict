@@ -18,12 +18,13 @@ const storageConfig=multer.diskStorage({
       }
 });
 app.use(express.static(__dirname));
-app.use(bodyParser.urlencoded({extended:false}));
+// app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(multer({storage:storageConfig}).single('file'));
 // app.use(cors());
 app.use('/book',bookRouter);
 app.use('/',searchRouter);
-//app.use('/',homeRouter);
+app.use('/list',homeRouter);
 
 app.use(function(req,res){
       res.status(404).send('Нет такой страницы');
@@ -41,5 +42,4 @@ mongoose.connect(mongoUrl,
   if(err) return console.log('Не могу подключится к БД',err);
   app.listen(PORT,()=>console.log(`Сервер запущен на порту ${PORT}`));
 });
-
 
