@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react';//подключаем библотеку React
 import style from './text-info.module.css';
 
+// создаем компонент для отображения найденного слова
 const TextInfo=(props)=>{
   if(props.data.length!==0){
     console.log('text-info',props.data[0].name);

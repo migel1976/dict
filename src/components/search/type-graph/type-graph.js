@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 import style from './type-graph.module.css';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+} from 'recharts';//подключаем библиотеку для отрисовки графиков жанра литературы
 
+// создаем компонент для отображения графика жанра
 export default class TypeGraph extends PureComponent {
-
   render() {
     return (
       <div className={style.type_graph}>

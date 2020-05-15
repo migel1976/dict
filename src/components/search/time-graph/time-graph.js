@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react';//подключаем библотеку React
 import style from './time-graph.module.css';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';//подключаем билиотеку для отрисовки графиков времени
 
+// создаем компонент для отображения графика времени
 class TimeGraph extends React.Component{
 
  render(){  
