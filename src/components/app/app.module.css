@@ -12,25 +12,14 @@
   grid-area:cn;
 }
 
-body{
-  font-family: Roboto,Segoe UI,Arial,sans-serif;
-  font-size:20px;
-  /* background-color: #44014C; */
-  /* background-image:url(../../assets/images/paper.jpg); */
-  /* background-image:url(../../assets/images/paper2.png); */
-  /* background-image:url(../../assets/images/paper3.jpg); */
-  
-  background-image:url(../../assets/images/paper6.png);
-  
-  /* background-image:url(../../assets/images/paper1.png); */
-  /* background-size: contain; */
-  background-size: cover;
-  background-repeat:no-repeat;
-  /* background-image:url(../../assets/images/paper.jpg); */
-  /* font-family:'RUSIJA-01'; */
-  font-family:'A La Russ';
-    }
-h1{
- /* font-family:'RUSIJA-01'; */
-  font-size:48px;
- };
+/* body{ */
+/*   font-family: Roboto,Segoe UI,Arial,sans-serif; */
+/*   font-size:20px; */
+/*   background-image:url(../../assets/images/paper6.png); */
+/*   background-size: cover; */
+/*   background-repeat:no-repeat; */
+/*   font-family:'A La Russ'; */
+/*     } */
+/* h1{ */
+/*   font-size:48px; */
+/*  }; */

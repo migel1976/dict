@@ -1,0 +1,16 @@
+body{
+  font-family: Roboto,Segoe UI,Arial,sans-serif;
+  font-size:20px;
+  background-image:url(./paper6.png);
+  /* background-image:url(./paper2.jpg); */
+  background-size: cover;
+  /* background-size: contain; */
+  /* background-size: 100% 100%; */
+  /* background-size: 100%; */
+  background-repeat:no-repeat;
+  /* background-repeat:repeat-y; */
+  font-family:'A La Russ';
+    }
+h1{
+  font-size:48px;
+ };

@@ -1,6 +1,11 @@
 .main{
-  /* color:green; */
-  background-size: cover;
-  background-repeat:no-repeat;
+  /* background-size: cover; */
+  margin-top:20px;
+  /* background-repeat:no-repeat; */
   text-align:center;
 }
+.main_list{
+  color:red;
+  font-size:30px;
+}
+

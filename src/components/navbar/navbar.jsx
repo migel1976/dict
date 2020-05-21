@@ -6,8 +6,8 @@ import style from './navbar.module.css';//подключаем файл css
 const Navbar=()=>{
   return(
         <div className={style.navbar}>
-          {/*<NavLink to='/'>Главная</ NavLink>*/}
-          {/*|*/}
+          <NavLink to='/'>Главная</ NavLink>
+          |
           {/*определяем ссылку на страницу поиска*/}
           <NavLink to='/search'>Поиск </NavLink>
           |
