@@ -3,16 +3,16 @@ import {NavLink} from 'react-router-dom';//подключаем библиоте
 import style from './navbar.module.css';//подключаем файл css
 
 //cоздаем компонент для отображение меню
+// определяем ссылку на страницу поиска
+// определяем ссылку на страницу добавления книги
 const Navbar=()=>{
   return(
         <div className={style.navbar}>
           <NavLink to='/'>Главная</ NavLink>
           |
-          {/*определяем ссылку на страницу поиска*/}
-          <NavLink to='/search'>Поиск </NavLink>
+          <NavLink to='/search'>Поиск</NavLink>
           |
-          {/*определяем ссылку на страницу добавления книги*/}
-          <NavLink to='/add'> Добавление данных</NavLink>
+          <NavLink to='/add'>Добавление данных</NavLink>
         </div>
   )
 };

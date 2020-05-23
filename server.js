@@ -35,7 +35,8 @@ app.use(function(req,res){
 
 
 const PORT=config.get('port');//переменная в которой содержится порт на котором работает сервер, взят из конфигурационного фойла
-const mongoUrl=config.get('mongoUrl');//переменная в которой содержится адресс БД
+// const mongoUrl=config.get('mongoUrl');//переменная в которой содержится адресс БД
+const mongoUrl=config.get('localMongoUrl');//переменная в которой содержится адресс БД
 
 //подключаемся к БД, если подключение прошло успешно то включаем сервер
 mongoose.connect(mongoUrl,

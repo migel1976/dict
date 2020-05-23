@@ -6,7 +6,7 @@ import Navbar from '../navbar/navbar';//подключаем компонент 
 import Header from '../header/header';//подключаем компонент отвечающий за создание заголовка
 import Search from '../search/search';//подключаем компонент отвечающий за отображение  страницы поиска на странице 
 import AddBook from '../add-book/add-book';//подключаем компонент отвечающий за отображение страницы добавления книг 
-import Main from '../main/main';
+import Main from '../main/main';//подключаем компонент отвечающий за отображение страницы выгрузки 
   //создаем основной компонент который в который загружается все дочерние компоненты
   const App=()=>{
 	const selectList = {
